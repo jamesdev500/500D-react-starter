@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import * as React from 'react';
+import 'twin.macro';
+
+import { Container } from '@/styles/sharedstyles';
 
 import * as S from './Header.style';
 
@@ -11,7 +14,7 @@ const links = [
 export default function Header() {
   return (
     <S.Header>
-      <div>
+      <Container tw='flex-row'>
         <Link href='/' className='home-link'>
           Home
         </Link>
@@ -24,7 +27,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      </Container>
     </S.Header>
   );
 }

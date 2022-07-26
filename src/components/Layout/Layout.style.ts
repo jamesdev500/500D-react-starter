@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import tw from 'twin.macro';
 
 /**
  * Main Content Wrapper
@@ -7,4 +8,7 @@ import styled from 'styled-components/macro';
 export const Layout = styled.main`
   height: auto;
   width: 100%;
+  > section {
+    ${tw`py-[60px]`}
+  }
 `;

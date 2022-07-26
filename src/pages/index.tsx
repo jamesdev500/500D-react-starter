@@ -43,7 +43,7 @@ export default function HomePage() {
             <CodeTag>pages/index.tsx</CodeTag>
           </Description>
 
-          <Link className='mt-6' href='/components'>
+          <Link href='/kitchen-sink'>
             See all components
           </Link>
 

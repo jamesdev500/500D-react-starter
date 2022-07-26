@@ -5,6 +5,7 @@ import * as S from '@/components/Button/Button.style';
 export interface ButtonMods {
   thin?: boolean;
   small?: boolean;
+  //  TODO add mode to make button as Link
 }
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement>, ButtonMods {
   variant?: 'primary' | 'secondary' | 'outline' | 'white-outline' | 'unstyled';

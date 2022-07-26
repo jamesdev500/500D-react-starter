@@ -4,9 +4,9 @@ import 'twin.macro';
 
 import Button from '@/components/Button';
 import Header from '@/components/Header';
-import Layout from '@/components/Layout';
 import Seo from '@/components/Seo';
 
+import KitchenLayout from '@/pages/kitchen-sink/page.style';
 import { Container } from '@/styles/sharedstyles';
 
 export default function ComponentsPage() {
@@ -20,7 +20,7 @@ export default function ComponentsPage() {
   const bgColor = mode === 'dark' ? 'bg-gray-700' : 'bg-white';
 
   return (
-    <Layout>
+    <KitchenLayout>
       <Seo
         templateTitle='Components'
         description='Pre-built components with awesome default'
@@ -36,20 +36,51 @@ export default function ComponentsPage() {
         </Container>
       </section>
 
-      <section tw="w-full bg-gray-300 py-10">
+      <section>
         <Container>
           <h3>Buttons:</h3>
-          <div tw="flex flex-row gap-5 w-full">
+          <article>
             <Button>Default</Button>
             <Button variant="primary">Primary</Button>
             <Button variant="secondary">Secondary Button</Button>
             <Button variant="outline">Outline Button</Button>
             <Button variant="white-outline">White Outline Button</Button>
-          </div>
+          </article>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h3>Headings (<small>font-family: 'Titillium Web'</small>)</h3>
+
+          <article tw='!flex-col' >
+            <h1>h1: The brown fox jumped over the lazy dog.</h1>
+            <h2>h2: The brown fox jumped over the lazy dog.</h2>
+            <h3>h3: The brown fox jumped over the lazy dog.</h3>
+            <h4>h4: The brown fox jumped over the lazy dog.</h4>
+            <h4>h5: The brown fox jumped over the lazy dog.</h4>
+          </article>
+        </Container>
+      </section>
+
+      <section>
+        <Container>
+          <h3>Body (<small tw='font-body'>font-family: 'Inter'</small>)</h3>
+          <article tw='!flex-col' >
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            <p>Curse you and all the halflings! Deserted anytime Lake-town burned caves balls. Smoked lthilien forbids Thrain?</p>
+            <ul>
+              <li>Adamant.</li>
+              <li>Southfarthing!</li>
+              <li>Witch-king.</li>
+              <li>Precious.</li>
+              <li>Gaffer's!</li>
+            </ul>
+          </article>
         </Container>
       </section>
 
 
-    </Layout>
+    </KitchenLayout >
   );
 }
