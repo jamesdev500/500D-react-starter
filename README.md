@@ -41,25 +41,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Standards / Patterns / Best Practices
 
 - <b>KISS</b> - avoid making unecessary functions taken from other projects,
-  each project is custom and must match only it's Figma components with pixel accuracy as much as possible,
-  if there are obvious reusable based components (not including styles), add them here to our company boilerplate /kitchen-sink page.
+  each project is custom and must match only its Figma components with pixel accuracy as much as possible.
+  If there are obvious reusable components (i.e buttons, forms), add them here to our company starter /kitchen-sink page. but remove them from a project if not used.
 - <b>DRY</b> - but keep it simple
   - All reusable compoents at an atom, element, block (before section) level are are demoed in this template
     /kitchen-sink
   - Resuable intefaces and customHooks are stored in /types and /utils respectively
-- For each new React project, get aquanted with components in the /kitchen sink always add more or add variants to existing ones as needed.
+  - For each new React project, get aquanted with components presented in the /kitchen-sink,
+    then add more or add variants to existing ones as needed based on project mockups/requirements
 - <b>Separation of concerns</b>:
   - keep stylsheets / styled-components purely declarative of styles
   - Put logic ie. coditionals, calculations, loops inside functions component or helper files.
 - <b>Styling:</b>
-  - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference 
+  - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference
   - save font families and colors as variables in tailwind.config.js
-  - you may use vanilla css can be used alongside tailwind syntax inside the styled component files
-  - Use only inline tailwind styles only for quick layout i.e. tw='flex flex-col gap-5', the rest place in styled components
+  - vanilla css can be used alongside tailwind syntax inside the styled component files
+  - use only inline tailwind styles only for quick layout i.e. tw='flex-col gap-5', the rest place in styled components, this keeps the least band-aids or overrides on our code
   - Put CSS in JavaScript - through styled components
 - <b>Typescript:</b>
+
   - Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
-  - Take the previous state into account while updating the state
+  - Take the previous state into account while updating the state i.e.
   - Use TS-free TSX (JS free JSX) as much as possible - If logic is a one-liner, then using it in the TSX is fine
 
 - Use functional components and hooks, no class components and constructors as much as possible
@@ -78,6 +80,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - CONSTANT_CASE - global constant values, including enum values
 - CSS-in-JS - follow [Airbnb Style Guide](https://github.com/airbnb/javascript/tree/master/css-in-javascript#naming)
 - Avoid using abbreviations in variables i.e. for "getTZ" use getTimeZone / getTimezone
+- for typescript interface or types declared inside components file add suffix "Props"
+  i.e. "type ButtonProps = {" or "interface ButtonProps {"
 
 ### Requirements before making PR / Merges
 
