@@ -40,13 +40,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Standards / Patterns / Best Practices
 
-- <b>KISS</b> - avoid making unecessary functions and functions,
-  each project is custom and must match only Figma components,
-  if there are obvious reusable patterns, add them to our Company starter themes.
+- <b>KISS</b> - avoid making unecessary functions taken from other projects,
+  each project is custom and must match only it's Figma components with pixel accuracy as much as possible,
+  if there are obvious reusable based components (not including styles), add them here to our company boilerplate /kitchen-sink page.
 - <b>DRY</b> - but keep it simple
-  - All reusable compoents at an atom, element, block (before section) level are are demoed in
+  - All reusable compoents at an atom, element, block (before section) level are are demoed in this template
     /kitchen-sink
-  - store resuable intefaces and customHooks are stored in /types and /utils respectively
+  - Resuable intefaces and customHooks are stored in /types and /utils respectively
 - For each new React project, get aquanted with components in the /kitchen sink always add more or add variants to existing ones as needed.
 - <b>Separation of concerns</b>:
   - keep stylsheets / styled-components purely declarative of styles
