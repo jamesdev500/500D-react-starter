@@ -8,6 +8,27 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        secondary: ['Titillium Web', ...fontFamily.serif],
+        body: ['Inter', ...fontFamily.sans],
+        heading: ['Titillium Web', ...fontFamily.serif],
+      },
+      fontSize: {
+        xsmall: '10px',
+        small: '12px',
+        base: '16px',
+        lg: '18px',
+        xlarge: '24px',
+        '2xlarge': '30px',
+        '3xlarge': '40px',
+        '4xlarge': '48px',
+        '5xlarge': '60px'
+      },
+      colors: {
+        blue: {
+          DEFAULT: '#3704FF',
+          darkest: '#022343'
+        },
+
       },
       keyframes: {
         flicker: {

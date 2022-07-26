@@ -1,21 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
-import tw from 'twin.macro';
+
+import FontFamilies from '@/styles/fontFamilies';
+import PreFlight from '@/styles/preFlight';
+import Typography from '@/styles/typography';
 
 const GlobalStyle = createGlobalStyle`
+  ${PreFlight}
+  ${FontFamilies}
+  ${Typography}
+
   html,
   body {
     color: ${({ theme }) => theme.colors.primary};
-    ${tw`font-primary`};
-    ${tw`p-0 m-0`};
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  * {
-    box-sizing: border-box;
   }
 `;
 
