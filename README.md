@@ -51,11 +51,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - <b>Separation of concerns</b>:
   - keep stylsheets / styled-components purely declarative of styles
   - Put logic ie. coditionals, calculations, loops inside functions component or helper files.
-    Styling:
+- <b>Styling:</b>
+  - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference 
+  - save font families and colors as variables in tailwind.config.js
+  - you may use vanilla css can be used alongside tailwind syntax inside the styled component files
   - Use only inline tailwind styles only for quick layout i.e. tw='flex flex-col gap-5', the rest place in styled components
   - Put CSS in JavaScript - through styled components
 - <b>Typescript:</b>
-
   - Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
   - Take the previous state into account while updating the state
   - Use TS-free TSX (JS free JSX) as much as possible - If logic is a one-liner, then using it in the TSX is fine
