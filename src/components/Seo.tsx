@@ -34,7 +34,7 @@ export default function Seo(props: SeoProps) {
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
-  // !STARTERCONF Follow config for opengraph, by deploying one on https://github.com/theodorusclarence/og
+  // !STARTERCONF Follow config for opengraph,
   // ? Uncomment code below if you want to use default open graph
   // meta['image'] = openGraph({
   //   description: meta.description,

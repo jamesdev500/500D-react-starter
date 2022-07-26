@@ -53,11 +53,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - keep stylsheets / styled-components purely declarative of styles
   - Put logic ie. coditionals, calculations, loops inside functions component or helper files.
 - <b>Styling:</b>
+
   - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference
   - save font families and colors as variables in tailwind.config.js
   - vanilla css can be used alongside tailwind syntax inside the styled component files
   - use only inline tailwind styles only for quick layout i.e. tw='flex-col gap-5', the rest place in styled components, this keeps the least band-aids or overrides on our code
   - Put CSS in JavaScript - through styled components
+  - /kitchen-sink page loads storybook (TBA)
+
 - <b>Typescript:</b>
 
   - Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
