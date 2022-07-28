@@ -88,18 +88,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Requirements before making PR / Merges
 
-- Check for linter warnings/error, if present run:
+- Pull latest 'dev' branch and create branch using the format {jira_story_id}-{name}. i.e. "SHT-123-user-profile-ui"
+- Make commits at least 1 commit per shift to your branch, even if unfinished just use commit message i.e. "wip: user profile ui"
+- Check for linter warnings/error, run:
   ```bash
   yarn lint:fix
   ```
-- Check for code format incosistencies, if present run:
+- Check for code format incosistencies, run:
   ```bash
   yarn format
   ```
-- Make sure there are no build errors, run:
+- Make sure there are no build errors, so CI won't fail to check run:
   ```bash
   yarn build
   ```
+- After finishing work done on story, create PR, then assign any other dev for PR approval, before merging. Just a double check so nothing gets broken.
+- The above commands are not automated yet, so individual discretion for linting and formatting is needed for now. auto linting, and formatting, is yet to setup in the app CI.
 - Follow Commit message pattern [conventional commits](https://www.conventionalcommits.org) <br/>
   <e>i.e. "fix: button alignment", "chore: lint fixes", "feat: login form"<p>
 
