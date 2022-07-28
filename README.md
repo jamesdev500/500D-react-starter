@@ -4,7 +4,23 @@
   <p>by <a href="#">500 Designs Software Engineering Team</a></p>
 </div>
 
-## Features
+# Table of contents
+
+<!--ts-->
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Standards / Patterns / Best Practices](#standards-patterns-and-best-practices)
+  - [KISS](#kiss)
+  - [DRY](#dry)
+  - [Separation of concerns](#separation-of-concerns)
+  - [Styling](#styling)
+  - [Typescript](#typescript)
+- [Naming Conventions](#naming-conventions)
+- [Repo PR Requirements](#repo-pr-requirements)
+<!--te-->
+
+# Features
 
 - ⚡️ Next.js 12
 - ⚛️ React 18
@@ -20,7 +36,10 @@
 - 👷 Github Actions — Lint your code on PR
 - 🗺 Site Map — Automatically generate sitemap.xml
 
-## Getting Started
+<br/>
+<br/>
+
+# Getting Started
 
 ### 1. Install dependencies
 
@@ -38,35 +57,46 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Standards / Patterns / Best Practices
+<br/>
+<br/>
 
-- <b>KISS</b> - avoid making unecessary functions taken from other projects,
+# Standards, Patterns, and Best Practices
+
+## KISS
+
+- Avoid making unecessary functions taken from other projects,
   each project is custom and must match only its Figma components with pixel accuracy as much as possible.
   If there are obvious reusable components (i.e buttons, forms), add them here to our company starter /kitchen-sink page. but remove them from a project if not used.
-- <b>DRY</b> - but keep it simple
-  - All reusable compoents at an atom, element, block (before section) level are are demoed in this template
-    /kitchen-sink
-  - Resuable intefaces and customHooks are stored in /types and /utils respectively
-  - For each new React project, get aquanted with components presented in the /kitchen-sink,
-    then add more or add variants to existing ones as needed based on project mockups/requirements
-- <b>Separation of concerns</b>:
-  - keep stylsheets / styled-components purely declarative of styles
-  - Put logic ie. coditionals, calculations, loops inside functions component or helper files.
-- <b>Styling:</b>
 
-  - Before coding pages, components on the project's Figma Style guide must be built first. and presented in /kitchen-sink for other dev's reference
-  - save font families and colors as variables in tailwind.config.js
-  - vanilla css can be used alongside tailwind syntax inside the styled component files
-  - use only inline tailwind styles only for quick layout i.e. tw='flex-col gap-5', the rest place in styled components, this keeps the least band-aids or overrides on our code
-  - Put CSS in JavaScript - through styled components
-  - /kitchen-sink page loads storybook (TBA)
+## DRY
 
-- <b>Typescript:</b>
+- but keep it simple
+- All reusable compoents at an atom, element, block (before section) level are are demoed in this template
+  /kitchen-sink
+- Resuable intefaces and customHooks are stored in /types and /utils respectively
+- For each new React project, get aquanted with components presented in the /kitchen-sink,
+  then add more or add variants to existing ones as needed based on project mockups/requirements
 
-  - Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
-  - Take the previous state into account while updating the state i.e.
-  - Use TS-free TSX (JS free JSX) as much as possible - If logic is a one-liner, then using it in the TSX is fine
+## Separation of concerns
 
+- keep stylsheets / styled-components purely declarative of styles
+- Put logic ie. coditionals, calculations, loops inside functions component or helper files.
+
+## Styling
+
+- Before coding pages, components must be built first. and be presented in /kitchen-sink for other dev's reference
+- match components to items presented in Figma's component screen, if not present then just refer to it's instance in the pages
+- save font families and colors as variables in tailwind.config.js
+- vanilla css can be used alongside tailwind syntax inside the styled component files
+- use only inline tailwind styles only for quick layout i.e. tw='flex-col gap-5', the rest, place in styled components, this keeps the least band-aids or overrides on our code
+- Put CSS in JavaScript - through styled components
+- TBA: /kitchen-sink page loads storybook in the future, after storybook is added here
+
+## Typescript
+
+- Provide explicit types for all values (esp. with props), avoid using 'any' as much as possible
+- Take the previous state into account while updating the state i.e.
+- Use TS-free TSX (JS free JSX) as much as possible - If logic is a one-liner, then using it in the TSX is fine
 - Use functional components and hooks, no class components and constructors as much as possible
 - store mockdata (pre API integration) in a separate file
 - Multiple component definition per file, is not allowed
@@ -76,7 +106,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Use short cirtuit operators for Conditional rendering
 - Use folder components
 
-### Naming Conventions
+<br/>
+<br/>
+
+# Naming Conventions
 
 - UpperCamelCase - component / interface / type / enum / decorator / type parameters
 - lowerCamelCase - variable / parameter / function / method / property / module alias
@@ -86,7 +119,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - for typescript interface or types declared inside components file add suffix "Props"
   i.e. "type ButtonProps = {" or "interface ButtonProps {"
 
-### Requirements before making PR / Merges
+<br/>
+<br/>
+
+# Repo PR Requirements
 
 - Pull latest 'dev' branch and create branch using the format {jira_story_id}-{name}. i.e. "SHT-123-user-profile-ui"
 - Make commits at least 1 commit per shift to your branch, even if unfinished just use commit message i.e. "wip: user profile ui"
@@ -102,12 +138,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   ```bash
   yarn build
   ```
-- After finishing work done on story, create PR, then assign any other dev for PR approval, before merging. Just a double check so nothing gets broken.
-- The above commands are not automated yet, so individual discretion for linting and formatting is needed for now. auto linting, and formatting, is yet to setup in the app CI.
+- After finishing work done on story, create PR, then assign any other dev for PR approval, before merging.
+- TBA: The above commands are not automated yet, so individual discretion for linting and formatting is needed for now. auto linting, and formatting, is yet to setup in the app CI.
 - Follow Commit message pattern [conventional commits](https://www.conventionalcommits.org) <br/>
   <e>i.e. "fix: button alignment", "chore: lint fixes", "feat: login form"<p>
 
-### Recommended VsCode Extensions
+<br/>
+<br/>
+
+# Recommended VsCode Extensions (optional)
 
 - ESLint
 - GitLens

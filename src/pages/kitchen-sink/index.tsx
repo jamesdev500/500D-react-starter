@@ -10,14 +10,14 @@ import KitchenLayout from '@/pages/kitchen-sink/page.style';
 import { Container } from '@/styles/sharedstyles';
 
 export default function ComponentsPage() {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
+  // const [mode, setMode] = React.useState<'dark' | 'light'>('light');
 
-  function toggleMode() {
-    return mode === 'dark' ? setMode('light') : setMode('dark');
-  }
+  // function toggleMode() {
+  //   return mode === 'dark' ? setMode('light') : setMode('dark');
+  // }
 
-  const textColor = mode === 'dark' ? 'text-gray-100' : 'text-gray-600';
-  const bgColor = mode === 'dark' ? 'bg-gray-700' : 'bg-white';
+  // const textColor = mode === 'dark' ? 'text-gray-100' : 'text-gray-600';
+  // const bgColor = mode === 'dark' ? 'bg-gray-700' : 'bg-white';
 
   return (
     <KitchenLayout>
@@ -51,7 +51,7 @@ export default function ComponentsPage() {
 
       <section>
         <Container>
-          <h3>Headings (<small>font-family: 'Titillium Web'</small>)</h3>
+          <h3>Headings (<small>font-family: &apos;Titillium Web&apos;</small>)</h3>
 
           <article tw='!flex-col' >
             <h1>h1: The brown fox jumped over the lazy dog.</h1>
@@ -65,7 +65,7 @@ export default function ComponentsPage() {
 
       <section>
         <Container>
-          <h3>Body (<small tw='font-body'>font-family: 'Inter'</small>)</h3>
+          <h3>Body (<small tw='font-body'>font-family: &apos;Inter&apos;</small>)</h3>
           <article tw='!flex-col' >
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
             <p>Curse you and all the halflings! Deserted anytime Lake-town burned caves balls. Smoked lthilien forbids Thrain?</p>
@@ -74,7 +74,7 @@ export default function ComponentsPage() {
               <li>Southfarthing!</li>
               <li>Witch-king.</li>
               <li>Precious.</li>
-              <li>Gaffer's!</li>
+              <li>Gaffer&apos;s!</li>
             </ul>
           </article>
         </Container>
